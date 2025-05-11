@@ -1,0 +1,41 @@
+# ملفات قواعد البيانات المحلية
+*.sqlite3
+
+# ملفات Python المؤقتة والمجمعة
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ملفات البيئات الافتراضية (virtual environments)
+venv/
+env/
+ENV/
+.venv/
+
+# ملفات إعدادات محررات النصوص
+.vscode/
+.idea/
+
+# ملفات نظام التشغيل
+.DS_Store
+Thumbs.db
+
+# ملفات التكوين الشخصية
+*.env
+.env.*
+
+# مجلد static و media المؤقت (في حال تم تجميعهم محليًا)
+staticfiles/
+media/
+
+# ملفات التغطية والاختبار
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ملفات الترحيل التي قد لا ترغب بمشاركتها في بعض الحالات
+**/migrations/*.py
+!**/migrations/__init__.py

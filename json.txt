@@ -1,0 +1,90 @@
+this fuction to Re-scheduled time 
+
+GET/POST --> http://127.0.0.1:8000/api/appointments/
+[
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "date": "2025-05-06",
+        "time": "08:59:00",
+        "reason_if_rejected": "i want to change my face mouse by bootocs.'"
+    },
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "date": "2025-06-06",
+        "time": "08:59:00",
+        "reason_if_rejected": "i want to change my face mouse by bootocs"
+    },
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "date": "2025-08-06",
+        "time": "08:59:00",
+        "reason_if_rejected": "i want to change my face mouse by bootocs"
+    }
+]
+
+******************************************************************************************************
+this fuction to upload video in home page  
+
+GET/POST -->http://127.0.0.1:8000/api/videos/
+[
+    {
+        "name": "my first video",
+        "video": "http://127.0.0.1:8000/media/videos/WhatsApp_Video_2024-06-07_at_08.33.12.mp4",
+        "image": "http://127.0.0.1:8000/media/video_thumbnails/download_3.jpg",
+        "link": "http://127.0.0.1:8000/api/videos/"
+    }
+]
+*****************************************************************
+this fuction to upload articles in home page  
+
+GET/POST -->http://127.0.0.1:8000/api/articles/
+[
+    {
+        "name": "my second article",
+        "image": "http://127.0.0.1:8000/media/articles/download.jpg",
+        "link": ""
+    },
+    {
+        "name": "my first article",
+        "image": "http://127.0.0.1:8000/media/articles/download_1.jpg",
+        "link": "http://127.0.0.1:8000/api/articles/"
+    }
+]
+
+*****************************************************************
+this fuction to ContactUs 
+GET/POST -->http://127.0.0.1:8000/api/ContactUs/
+
+[
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "email": "ali@gmail.com",
+        "message": "ali"
+    },
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "email": "ali@gmail.com",
+        "message": ""
+    },
+    {
+        "name": "ameer waeel",
+        "phone": "01015651362",
+        "email": "ali@gmail.com",
+        "message": ""
+    }
+]
+
+*****************************************************************
+this fuction to upload Question&Answer 
+
+GET/POST -->http://127.0.0.1:8000/api/Question&Answer/
+
+{
+    "question": "what is your name",
+    "answer": "my name is ahmed"
+}
