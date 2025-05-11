@@ -1,0 +1,248 @@
+{
+  "info": {
+    "name": "Dr. Genedy API Collection",
+    "description": "API collection for Dr. Genedy's application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Appointments",
+      "description": "API endpoints for managing appointments",
+      "item": [
+        {
+          "name": "Get All Appointments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/appointments/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "appointments", ""]
+            },
+            "description": "Returns a list of all appointments"
+          }
+        },
+        {
+          "name": "Create New Appointment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Patient Name\",\n  \"phone\": \"01234567890\",\n  \"date\": \"2025-05-15\",\n  \"time\": \"10:00:00\",\n  \"reason_if_rejected\": \"\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/appointments/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "appointments", ""]
+            },
+            "description": "Create a new appointment"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Home Videos",
+      "description": "API endpoints for managing home videos",
+      "item": [
+        {
+          "name": "Get All Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/videos/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos", ""]
+            },
+            "description": "Returns a list of all videos"
+          }
+        },
+        {
+          "name": "Create New Video",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Video Name",
+                  "type": "text"
+                },
+                {
+                  "key": "video",
+                  "type": "file",
+                  "src": "/path/to/video.mp4"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/path/to/thumbnail.jpg"
+                },
+                {
+                  "key": "link",
+                  "value": "https://example.com/video",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/videos/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos", ""]
+            },
+            "description": "Create a new video"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Home Articles",
+      "description": "API endpoints for managing home articles",
+      "item": [
+        {
+          "name": "Get All Articles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/articles/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "articles", ""]
+            },
+            "description": "Returns a list of all articles"
+          }
+        },
+        {
+          "name": "Create New Article",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Article Name",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/path/to/article_image.jpg"
+                },
+                {
+                  "key": "link",
+                  "value": "https://example.com/article",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/articles/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "articles", ""]
+            },
+            "description": "Create a new article"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "description": "API endpoints for contact us messages",
+      "item": [
+        {
+          "name": "Get All Contact Messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ContactUs/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ContactUs", ""]
+            },
+            "description": "Returns a list of all contact messages"
+          }
+        },
+        {
+          "name": "Send Contact Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Contact Name\",\n  \"phone\": \"01234567890\",\n  \"email\": \"contact@example.com\",\n  \"message\": \"This is a contact message.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ContactUs/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ContactUs", ""]
+            },
+            "description": "Send a new contact message"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Question & Answer",
+      "description": "API endpoints for Q&A",
+      "item": [
+        {
+          "name": "Get All Q&A",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/Question&Answer/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "Question&Answer", ""]
+            },
+            "description": "Returns a list of all questions and answers"
+          }
+        },
+        {
+          "name": "Create New Q&A",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"What are your clinic hours?\",\n  \"answer\": \"Our clinic is open from 9AM to 6PM on weekdays, and 10AM to 4PM on Saturdays.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Question&Answer/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "Question&Answer", ""]
+            },
+            "description": "Create a new Q&A entry"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "description": "Base URL for the API"
+    }
+  ]
+}
