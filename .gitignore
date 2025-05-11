@@ -25,8 +25,8 @@ Thumbs.db
 .env.*
 
 # مجلد static و media المؤقت (في حال تم تجميعهم محليًا)
-staticfiles/
-media/
+# staticfiles/
+# media/
 
 # ملفات التغطية والاختبار
 htmlcov/
