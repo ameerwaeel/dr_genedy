@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ivc9pve0$^0)(@%=gry8e1wq0$e9wixq7zge)6vs8h_+%&w6b&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dr-genedy.pulslytics.agency']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dr-genedy.pulslytics.agency', 'api-genedy.pulslytics.agency']
 
 
 # Application definition
