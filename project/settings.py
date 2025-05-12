@@ -154,6 +154,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://www.drgenedy.com",
     "https://drgenedy.com",
     "http://drgenedy.com",
+    "https://api-genedy.pulslytics.agency",
+    "http://api-genedy.pulslytics.agency",
+    "https://dr-genedy.pulslytics.agency",
+    "http://dr-genedy.pulslytics.agency",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
@@ -174,4 +178,17 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+]
+
+# CSRF Settings
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "https://www.drgenedy.com",
+    "https://drgenedy.com",
+    "http://drgenedy.com",
+    "https://api-genedy.pulslytics.agency",
+    "http://api-genedy.pulslytics.agency",
+    "https://dr-genedy.pulslytics.agency",
+    "http://dr-genedy.pulslytics.agency",
 ]
