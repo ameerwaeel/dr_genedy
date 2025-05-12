@@ -21,7 +21,6 @@ class ClosedSlot(models.Model):
     
 class HomeVideo(models.Model):
     name = models.CharField(max_length=255,null=False, blank=False)
-    video = models.FileField(upload_to='videos/',null=False, blank=False)
     image = models.ImageField(upload_to='video_thumbnails/',null=False, blank=False)
     link = models.URLField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)

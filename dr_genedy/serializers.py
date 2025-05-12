@@ -13,7 +13,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointment
         fields = ['name', 'phone', 'date', 'time','reason_if_rejected' ]
-        
+
     def validate(self, data):
         date_ = data['date']
         time_ = data['time']
@@ -33,27 +33,32 @@ class AppointmentSerializer(serializers.ModelSerializer):
         # تحقق من وجود موعد سابق بنفس التاريخ والساعة
         if Appointment.objects.filter(date=date_, time=time_).exists():
             raise serializers.ValidationError("تم حجز هذا الموعد بالفعل")
-        
+
         for field in ['name', 'phone', 'date', 'time','reason_if_rejected' ]:
             if not data.get(field):
                 raise serializers.ValidationError({field: "This field is required."})
-            
+
         return data
 
 class HomeVideoSerializer(serializers.ModelSerializer):
     name = serializers.CharField(required=True, allow_blank=False)
-    video = serializers.FileField(required=True, allow_null=False)
+    # video = serializers.FileField(required=True, allow_null=False)
     image = serializers.ImageField(required=True, allow_null=False)
 
     class Meta:
         model = HomeVideo
-        fields = ['name', 'video', 'image', 'link']
+        fields = [
+            'name',
+            # 'video',
+            'image',
+            'link'
+            ]
 
     def validate(self, data):
         if not data.get('name'):
             raise serializers.ValidationError({"name": "هذا الحقل مطلوب"})
-        if not data.get('video'):
-            raise serializers.ValidationError({"video": "هذا الحقل مطلوب"})
+        # if not data.get('video'):
+        #     raise serializers.ValidationError({"video": "هذا الحقل مطلوب"})
         if not data.get('image'):
             raise serializers.ValidationError({"image": "هذا الحقل مطلوب"})
 
@@ -75,7 +80,7 @@ class HomeArticleSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({'image': 'الصورة مطلوبة'})
 
         return data
-    
+
 class ContactUsSerializer(serializers.ModelSerializer):
     name = serializers.CharField(required=True, allow_blank=False)
     phone = serializers.CharField(required=True, allow_blank=False)
@@ -95,7 +100,7 @@ class ContactUsSerializer(serializers.ModelSerializer):
 
 class QuestionAnswerSerializer(serializers.ModelSerializer):
     question = serializers.CharField(required=True, allow_blank=False)
-    answer = serializers.CharField(required=True, allow_blank=False)    
+    answer = serializers.CharField(required=True, allow_blank=False)
     class Meta:
         model = QuestionAnswer
         fields = ['question', 'answer']
