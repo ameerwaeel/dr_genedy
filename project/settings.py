@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ivc9pve0$^0)(@%=gry8e1wq0$e9wixq7zge)6vs8h_+%&w6b&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dr-genedy.pulslytics.agency', 'api-genedy.pulslytics.agency']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'drgenedy.com', 'api-genedy.pulslytics.agency']
 
 
 # Application definition
@@ -151,8 +151,9 @@ CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
     "http://127.0.0.1:4200",
-    "https://dr-genedy.pulslytics.agency",
-    "http://dr-genedy.pulslytics.agency",
+    "https://www.drgenedy.com",
+    "https://drgenedy.com",
+    "http://drgenedy.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
