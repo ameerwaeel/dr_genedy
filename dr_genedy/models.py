@@ -6,19 +6,19 @@ class Appointment(models.Model):
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False)
     is_available = models.BooleanField(default=True)
-    reason_if_rejected = models.TextField(blank=True, null=True)
+    reason_if_rejected = models.TextField(blank=false, null=True)
 
     def __str__(self):
         return f"{self.name} - {self.date} at {self.time}"
-    
+
 class ClosedSlot(models.Model):
     date = models.DateField()
-    time = models.TimeField(blank=True, null=True)  
+    time = models.TimeField(blank=True, null=True)
     reason = models.CharField(max_length=255)
 
     def __str__(self):
         return f"Closed: {self.date} - {self.time or 'Full Day'}"
-    
+
 class HomeVideo(models.Model):
     name = models.CharField(max_length=255,null=False, blank=False)
     image = models.ImageField(upload_to='video_thumbnails/',null=False, blank=False)
@@ -56,4 +56,4 @@ class QuestionAnswer(models.Model):
 
     def __str__(self):
         return self.question[:50]
-    
+
