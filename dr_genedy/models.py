@@ -6,7 +6,7 @@ class Appointment(models.Model):
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False)
     is_available = models.BooleanField(default=True)
-    reason_if_rejected = models.TextField(blank=False, null=True)
+    reason_if_rejected = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.name} - {self.date} at {self.time}"

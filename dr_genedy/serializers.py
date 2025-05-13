@@ -8,7 +8,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
     phone = serializers.CharField(required=True, allow_blank=False)
     date = serializers.DateField(required=True, allow_null=False)
     time = serializers.TimeField(required=True, allow_null=False)
-    reason_if_rejected = serializers.CharField(required=True, allow_blank=False)
+    reason_if_rejected = serializers.CharField(required=False, allow_blank=True)
 
     class Meta:
         model = Appointment
@@ -34,7 +34,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
         if Appointment.objects.filter(date=date_, time=time_).exists():
             raise serializers.ValidationError("تم حجز هذا الموعد بالفعل")
 
-        for field in ['name', 'phone', 'date', 'time','reason_if_rejected' ]:
+        for field in ['name', 'phone', 'date', 'time' ]:
             if not data.get(field):
                 raise serializers.ValidationError({field: "This field is required."})
 
